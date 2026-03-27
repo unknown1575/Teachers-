@@ -10,26 +10,27 @@
 <style>
 body {
     margin: 0;
-    padding: 0;
+    padding: 20px; /* prevents edge touching on mobile */
     background-color: #0b0b0b;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     font-family: 'Cinzel', serif;
 }
 
-/* SINGLE BOX */
+/* BIGGER BOX */
 .box {
     background-color: #0b0b0b;
     border: 2px solid #d4af37;
-    padding: 50px 60px;
-    max-width: 650px;
+    padding: 70px 90px;
+    width: 90%;
+    max-width: 900px;
     text-align: center;
     border-radius: 16px;
 }
 
-/* GOLD GRADIENT (like title) */
+/* GOLD GRADIENT */
 .gold-gradient {
     background: linear-gradient(135deg, #f5d27a, #d4af37, #b8962e);
     -webkit-background-clip: text;
@@ -38,14 +39,14 @@ body {
 
 /* QUOTE */
 .quote {
-    font-size: 30px;
-    margin-bottom: 30px;
+    font-size: 36px;
+    margin-bottom: 35px;
 }
 
-/* MESSAGE TEXT */
+/* MESSAGE */
 .text {
-    color: #e6e0d4; /* soft light text */
-    font-size: 18px;
+    color: #e6e0d4;
+    font-size: 20px;
     line-height: 1.8;
 }
 
@@ -53,6 +54,21 @@ body {
 .highlight {
     color: #f5d27a;
     font-weight: bold;
+}
+
+/* MOBILE OPTIMIZATION */
+@media (max-width: 600px) {
+    .box {
+        padding: 40px 25px;
+    }
+
+    .quote {
+        font-size: 26px;
+    }
+
+    .text {
+        font-size: 16px;
+    }
 }
 </style>
 </head>
