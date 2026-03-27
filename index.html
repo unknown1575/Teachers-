@@ -10,16 +10,15 @@
 body {
     margin: 0;
     background-color: #0b0b0b;
-    min-height: 100vh;
+    height: 100vh;
     display: flex;
     justify-content: center;
-    align-items: flex-end;   /* pushes card down */
-    padding-bottom: 12vh;    /* space from bottom */
+    align-items: center; /* PERFECT CENTER */
     font-family: 'Cinzel', serif;
     overflow: hidden;
 }
 
-/* ⭐ Stars background */
+/* ⭐ STARS (clear + visible) */
 body::before {
     content: "";
     position: fixed;
@@ -43,56 +42,51 @@ body::before {
     to { opacity: 1; }
 }
 
-/* 📦 Card */
+/* 📦 TALLER, NOT TOO WIDE */
 .box {
     border: 2px solid #d4af37;
-    width: 92%;
-    max-width: 700px;       /* wider like screenshot */
-    padding: 80px 30px;
+    width: 85%;              /* not too wide */
+    max-width: 500px;        /* keeps shape neat */
+    padding: 90px 30px;      /* MORE HEIGHT */
     text-align: center;
-    border-radius: 26px;
-    box-shadow: 0 0 30px rgba(212, 175, 55, 0.12); /* soft glow */
+    border-radius: 22px;
 }
 
-/* ✨ Gold text */
+/* GOLD TEXT */
 .gold-gradient {
     background: linear-gradient(135deg, #f5d27a, #d4af37, #b8962e);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
-/* 📝 Quote */
+/* BIG QUOTE */
 .quote {
-    font-size: 26px;
-    margin-bottom: 30px;
+    font-size: 30px;
+    margin-bottom: 40px;
 }
 
-/* 📄 Text */
+/* TEXT */
 .text {
-    color: #d8d2c4;
-    font-size: 17px;
-    line-height: 1.8;
+    color: #e6e0d4;
+    font-size: 18px;
+    line-height: 1.9;
 }
 
-/* 🔆 Highlight */
+/* HIGHLIGHT */
 .highlight {
     color: #f5d27a;
     font-weight: bold;
 }
 
-/* 📱 Mobile */
+/* 📱 MOBILE */
 @media (max-width: 600px) {
-    body {
-        padding-bottom: 10vh;
-    }
-
     .box {
-        width: 94%;
-        padding: 70px 20px;
+        width: 90%;
+        padding: 80px 20px; /* still tall */
     }
 
     .quote {
-        font-size: 22px;
+        font-size: 24px;
     }
 
     .text {
