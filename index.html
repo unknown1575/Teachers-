@@ -19,41 +19,43 @@ body {
     overflow: hidden;
 }
 
-/* ⭐ CLEAR STARS */
+/* ⭐ MORE + DENSER STARS */
 body::before {
     content: "";
     position: fixed;
     width: 100%;
     height: 100%;
     background-image:
-        radial-gradient(2px 2px at 10% 20%, white, transparent),
-        radial-gradient(2px 2px at 30% 70%, white, transparent),
-        radial-gradient(1.5px 1.5px at 50% 40%, white, transparent),
-        radial-gradient(2px 2px at 70% 90%, white, transparent),
-        radial-gradient(1.5px 1.5px at 90% 10%, white, transparent),
-        radial-gradient(2px 2px at 80% 60%, white, transparent),
-        radial-gradient(1px 1px at 20% 90%, white, transparent),
-        radial-gradient(1.5px 1.5px at 60% 20%, white, transparent);
-    background-repeat: repeat;
-    animation: twinkle 3s infinite alternate;
+        radial-gradient(2px 2px at 5% 10%, white, transparent),
+        radial-gradient(2px 2px at 15% 80%, white, transparent),
+        radial-gradient(1.5px 1.5px at 25% 30%, white, transparent),
+        radial-gradient(2px 2px at 35% 60%, white, transparent),
+        radial-gradient(1.5px 1.5px at 45% 20%, white, transparent),
+        radial-gradient(2px 2px at 55% 75%, white, transparent),
+        radial-gradient(1.5px 1.5px at 65% 40%, white, transparent),
+        radial-gradient(2px 2px at 75% 10%, white, transparent),
+        radial-gradient(1.5px 1.5px at 85% 70%, white, transparent),
+        radial-gradient(2px 2px at 95% 50%, white, transparent),
+        radial-gradient(1px 1px at 20% 95%, white, transparent),
+        radial-gradient(1px 1px at 60% 90%, white, transparent);
+    animation: twinkle 2.5s infinite alternate;
     z-index: -1;
 }
 
 /* ✨ Twinkle */
 @keyframes twinkle {
-    from { opacity: 0.4; }
+    from { opacity: 0.5; }
     to { opacity: 1; }
 }
 
-/* 📦 BOX (wider now) */
+/* 📦 BIGGER BOX */
 .box {
     border: 2px solid #d4af37;
-    padding: 50px 30px;
-    width: 95%;          /* almost full width */
-    max-width: 500px;    /* keeps it neat */
+    padding: 70px 40px;
+    width: 95%;
+    max-width: 650px;  /* increased */
     text-align: center;
-    border-radius: 18px;
-    background: transparent; /* so stars show inside */
+    border-radius: 20px;
 }
 
 /* GOLD GRADIENT */
@@ -63,23 +65,39 @@ body::before {
     -webkit-text-fill-color: transparent;
 }
 
-/* QUOTE */
+/* 🔠 BIGGER QUOTE */
 .quote {
-    font-size: 26px;
-    margin-bottom: 25px;
+    font-size: 32px;
+    margin-bottom: 30px;
 }
 
-/* TEXT */
+/* 🔠 BIGGER TEXT */
 .text {
     color: #e6e0d4;
-    font-size: 16px;
-    line-height: 1.7;
+    font-size: 18px;
+    line-height: 1.8;
 }
 
 /* HIGHLIGHT */
 .highlight {
     color: #f5d27a;
     font-weight: bold;
+}
+
+/* 📱 MOBILE OPTIMIZATION */
+@media (max-width: 600px) {
+    .box {
+        padding: 50px 25px;
+        max-width: 90%;
+    }
+
+    .quote {
+        font-size: 24px;
+    }
+
+    .text {
+        font-size: 15px;
+    }
 }
 </style>
 </head>
